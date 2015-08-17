@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainModel.h"
+#import "LocationModel.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MainModel *mainModel;
+@property (strong, nonatomic) LocationModel *locationModel;
 
++ (AppDelegate *)appDelegate;
 
 @end
+
 

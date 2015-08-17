@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "RatingsViewController.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate>
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
+@property (strong, nonatomic) RatingsViewController *ratingsVC;
+@property (nonatomic) double currentLongitude;
+@property (nonatomic) double currentLatitude;
+@property (nonatomic, strong) NSArray *venues;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *mapButton;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *logOutButton;
+@property (nonatomic) int currentUserRating;
+@property (nonatomic) NSString *currentVenue;
+@property (nonatomic) int currentGroupRating;
 
 @end
 
